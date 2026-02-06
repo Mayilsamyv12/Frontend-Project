@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="checkout.css">
+
+
+
+<div class="checkout-container">
+  <h2>Delivery Address</h2>
+
+<form action="payment.html" onsubmit="saveAddress()">
+  <input required placeholder="House No">
+  <input required placeholder="Area">
+  <input required placeholder="Street">
+  <input required placeholder="Landmark">
+  <input required placeholder="City">
+  <input type="number" required placeholder="Pincode">
+
+  <button type="submit">Continue</button>
+</form>
+
+
+</div>
+
+<script>
+function saveAddress() {
+  const address = {
+    house: house.value,
+    area: area.value,
+    street: street.value,
+    landmark: landmark.value,
+    city: city.value,
+    pincode: pincode.value
+  };
+
+  localStorage.setItem("address", JSON.stringify(address));
+  console.log("Address stored:", address);
+
+  window.location.href = "payment.html";
+}
+</script>
+
+

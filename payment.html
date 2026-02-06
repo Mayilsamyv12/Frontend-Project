@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="checkout.css">
+
+<div class="checkout-container">
+  <h2>Payment</h2>
+
+
+<p>Total: ₹<span id="total"></span></p>
+
+<button onclick="pay()">Pay</button>
+</div>
+<script>
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+
+cart.forEach(i => total += i.price);
+document.getElementById("total").innerText = total;
+
+function pay() {
+  window.location.href = "success.html";
+}
+</script>
+
