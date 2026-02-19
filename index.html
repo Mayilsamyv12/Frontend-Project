@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Home</title>
-<link rel="stylesheet" href="style.css">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <script>
-  if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 
 
 
-<script src="protect.js"></script>
+  <script src="protect.js"></script>
 
-<nav class="navbar">
-  <img src="Logoname.png">
-  <a href="index.html"><h2>Home</h2></a>
-  <a href="offers.html"><h2>Offers</h2></a>
-  <a href="about.html"><h2>About</h2></a>
-  
-    
-<input
-  type="text"
-  id="searchInput"
-  placeholder="Search products..."
-  onkeyup="searchProducts()"
-/>
+  <nav class="navbar">
+    <img src="Logo.png">
+    <a href="index.html">
+      <h2>Home</h2>
+    </a>
+    <a href="offers.html">
+      <h2>Offers</h2>
+    </a>
+    <a href="about.html">
+      <h2>About</h2>
+    </a>
 
-  <a href="cart.html"><h2>Cart🛒</h2></a>
-  <a href="logout.html"><h2>Logout</h2></a>
-</nav>
 
-<h2 id="welcome">Welcome to a grateful shopping experience!</h2>
+    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
 
-<div id="imageContainer"></div>
+    <a href="cart.html">
+      <h2>Cart🛒</h2>
+    </a>
+    <a href="logout.html">
+      <h2>Logout</h2>
+    </a>
+  </nav>
 
-<div id="products"></div>
+  <h2 id="welcome">Welcome to a grateful shopping experience!</h2>
 
-<footer class="site-footer">
-  <div class="footer-container">
+  <div id="imageContainer"></div>
 
-    <div class="footer-section">
-      <h4>Terms & Conditions</h4>
-      <p>
-        By using this website, you agree to follow our terms and conditions.
-        All product information, prices, and availability are subject to change
-        without prior notice. Users are responsible for maintaining the
-        confidentiality of their login details.
-      </p>
+  <div id="products"></div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h4>Terms & Conditions</h4>
+        <p>
+          By using this website, you agree to follow our terms and conditions.
+          All product information, prices, and availability are subject to change
+          without prior notice. Users are responsible for maintaining the
+          confidentiality of their login details.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Privacy Policy</h4>
+        <p>
+          We respect your privacy and are committed to protecting your personal
+          information. Any data collected during registration or checkout is used
+          only to process orders and improve user experience. We do not share
+          customer data with third parties.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>E-Waste Management</h4>
+        <p>
+          Our company follows responsible e-waste management practices. Customers
+          are encouraged to dispose of electronic products through authorized
+          recycling centers. Proper recycling helps protect the environment and
+          supports sustainable development.
+        </p>
+      </div>
+
     </div>
 
-    <div class="footer-section">
-      <h4>Privacy Policy</h4>
-      <p>
-        We respect your privacy and are committed to protecting your personal
-        information. Any data collected during registration or checkout is used
-        only to process orders and improve user experience. We do not share
-        customer data with third parties.
-      </p>
+    <div class="footer-bottom">
+      © 2025 Appliance Shop. All Rights Reserved.
     </div>
-
-    <div class="footer-section">
-      <h4>E-Waste Management</h4>
-      <p>
-        Our company follows responsible e-waste management practices. Customers
-        are encouraged to dispose of electronic products through authorized
-        recycling centers. Proper recycling helps protect the environment and
-        supports sustainable development.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 Appliance Shop. All Rights Reserved.
-  </div>
-</footer>
+  </footer>
 
 
-<script src="products.js"></script>
-<script src="cart.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
 
 
-<script>
-  function searchProducts() {
-    let key = document.getElementById("searchInput").value.toLowerCase();
-    let filtered = products.filter(p =>
-      p.name.toLowerCase().includes(key)
-    );
-    displayProducts(filtered);
-  }
+  <script>
+    function searchProducts() {
+      let key = document.getElementById("searchInput").value.toLowerCase();
+      let filtered = products.filter(p =>
+        p.name.toLowerCase().includes(key)
+      );
+      displayProducts(filtered);
+    }
 
-  // show all products initially
-  displayProducts(products);
-</script>
+    // show all products initially
+    displayProducts(products);
+  </script>
 
-<script>
-setTimeout(() => {
-  document.getElementById("welcome").style.display = "none";
-}, 2000);
+  <script>
+    setTimeout(() => {
+      document.getElementById("welcome").style.display = "none";
+    }, 2000);
 
-displayProducts(products);
-</script>
+    displayProducts(products);
+  </script>
 
 </body>
+
 </html>

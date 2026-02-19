@@ -1,9 +1,18 @@
 // REGISTER FUNCTION
 function register() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!name || !email || !password) {
+    alert("Please fill in all fields (Name, Email, Password).");
+    return;
+  }
+
   const user = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    password: document.getElementById("password").value
+    name: name,
+    email: email,
+    password: password
   };
 
   // store in localStorage
@@ -20,8 +29,13 @@ function register() {
 function login() {
   const storedUser = JSON.parse(localStorage.getItem("user"));
 
-  const loginEmail = document.getElementById("loginEmail").value;
-  const loginPassword = document.getElementById("loginPassword").value;
+  const loginEmail = document.getElementById("loginEmail").value.trim();
+  const loginPassword = document.getElementById("loginPassword").value.trim();
+
+  if (!loginEmail || !loginPassword) {
+    alert("Please fill in both Email and Password.");
+    return;
+  }
 
   const loginData = {
     email: loginEmail,

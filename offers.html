@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Offers</title>
-<link rel="stylesheet" href="style.css">
+  <title>Offers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<script src="protect.js"></script>
+  <script src="protect.js"></script>
 
-<nav class="navbar">
-  <img src="Logoname.png" alt="">
-  <a href="index.html"><h2>Home</h2></a>
-  <a href="offers.html"><h2>Offers</h2></a>
-  <a href="about.html"><h2>About</h2></a>
-  <input id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
-  <a href="cart.html"><h2>Cart🛒</h2></a>
-  <a href="logout.html"><h2>Logout</h2></a>
-</nav>
+  <nav class="navbar">
+    <img src="Logo.png" alt="">
+    <a href="index.html">
+      <h2>Home</h2>
+    </a>
+    <a href="offers.html">
+      <h2>Offers</h2>
+    </a>
+    <a href="about.html">
+      <h2>About</h2>
+    </a>
+    <input id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+    <a href="cart.html">
+      <h2>Cart🛒</h2>
+    </a>
+    <a href="logout.html">
+      <h2>Logout</h2>
+    </a>
+  </nav>
 
-<h2>🔥Offer Products</h2>
-<p>GREAT DEALS ARE LIVE</p>
-<p>Upgrade your home with Durono’s special offers—premium home appliances at unbeatable prices for a limited time👍.
+  <h2>🔥Offer Products</h2>
+  <p>GREAT DEALS ARE LIVE</p>
+  <p>Upgrade your home with Durono’s special offers—premium home appliances at unbeatable prices for a limited time👍.
 
-</p>
-<div id="products"></div>
-
-
-
-<script src="products.js"></script>
-<script src="cart.js"></script>
+  </p>
+  <div id="products"></div>
 
 
 
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
 
-// <script>
-const offerproduct = [
-  { id: 1, name: "Refrigerator", price: 21999, image: "Fridge.jpg" },
-  { id: 2, name: "Washing Machine", price: 12999, image: "Wasingmachine.jpg" },
-  { id: 4, name: "AC", price: 26999, image: "Ac.jpg" },
-  { id: 3, name: "TV", price: 15499, image: "Tv.jpg" },
-  { id: 12, name: "Cooler", price: 34999, image: "Cooler.jpg" },
-  { id: 14, name: "Dishwasher", price: 25999, image: "Dishwasher.jpg" },
-  { id: 17, name: "Induction", price: 3499, image: "Induction.jpg" },
-  { id: 19, name: "Air Purifier", price: 12999, image: "Air Purifier.jpg" },
 
-];
 
-displayProducts(offerproduct);
-</script>
+
+  //
+  <script>
+    const offerproduct = [
+      { id: 1, name: "Refrigerator", price: 21999, image: "Fridge.jpg" },
+      { id: 2, name: "Washing Machine", price: 12999, image: "Wasingmachine.jpg" },
+      { id: 4, name: "AC", price: 26999, image: "Ac.jpg" },
+      { id: 3, name: "TV", price: 15499, image: "Tv.jpg" },
+      { id: 12, name: "Cooler", price: 34999, image: "Cooler.jpg" },
+      { id: 14, name: "Dishwasher", price: 25999, image: "Dishwasher.jpg" },
+      { id: 17, name: "Induction", price: 3499, image: "Induction.jpg" },
+      { id: 19, name: "Air Purifier", price: 12999, image: "Air Purifier.jpg" },
+
+    ];
+
+    displayProducts(offerproduct);
+  </script>
 
 </body>
+
 </html>
-
-
-
